@@ -1,0 +1,29 @@
+.component3Container{
+    display: flex;
+    max-width: 1140px;  
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.component3Container h1{
+    flex: 1;
+    color: #515151;
+    font-size: 55px;
+    font-weight: 300;
+}   
+.component3Container .buttons{
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 822px) {
+    .component3Container{
+        flex-direction: column;
+    }
+
+    .component3Container .buttons{
+        gap: 20px;
+    }
+
+}

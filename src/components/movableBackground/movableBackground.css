@@ -1,0 +1,157 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@keyframes move_background {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.movable_background_container{
+    background:  linear-gradient(-45deg, rgb(64, 93, 230), rgb(88, 81, 219), rgb(131, 58, 180), rgb(193, 53, 132), rgb(225, 48, 108), rgb(253, 29, 29), rgb(245, 96, 64), rgb(247, 119, 55), rgb(252, 175, 69), rgb(255, 205, 75), rgb(81, 255, 0), rgb(67, 210, 0));
+    background-size: 400% 400%;
+    position: relative;
+    animation: move_background 5s ease-in-out infinite;
+    padding: 30px 0;
+    margin: -8px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.movable_background_container .options{
+    color: white;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    /* gap: 4px; */
+    background-color: #FFFFFF59;
+    padding: 5px 6px;
+    border-radius: 40px;
+    z-index: 3;
+}
+
+.movable_background_container .options .option_icon{
+    --value : 18px;
+    height: var(--value);
+    width: var(--value);
+}
+.movable_background_container .options .col{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 23px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.movable_background_container .options .col:hover{
+    cursor: pointer;
+}
+
+
+@keyframes remove_moving_bg_animation {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes add_moving_bg_animation {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+/* Add animation to Institution tab */
+.movable_background_container #col1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: linear-gradient(-45deg,#27a2ff 0%,#4062ff 100%);
+    height: 100%;
+    animation: add_moving_bg_animation .5s;
+    z-index: -1;
+}
+.movable_background_container #col1, .movable_background_container #col2{
+    box-shadow: 0px 0px 10px 0px rgb(13 102 255 / 66%);
+    /* border: 0.1px solid white; */
+    outline-style: dotted;
+    outline-width: thin;
+}
+
+.movable_background_container #col1:hover, .movable_background_container #col2:hover{
+    outline: none;
+}
+
+/* Remove Animaiton from Institution Tab */
+.movable_background_container #removeCol1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    background: linear-gradient(-45deg,#27a2ff 0%,#4062ff 100%);
+    height: 100%;
+    animation: remove_moving_bg_animation .5s;
+    z-index: -1;
+}
+
+/* Add animation to Study Material tab */
+.movable_background_container #col2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(-45deg,#27a2ff 0%,#4062ff 100%);
+    height: 100%;
+    animation: add_moving_bg_animation .5s;
+    z-index: -1;
+}
+
+/* Remove Animaiton from Study Material Tab */
+.movable_background_container #removeCol2::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    background: linear-gradient(-45deg,#27a2ff 0%,#4062ff 100%);
+    height: 100%;
+    animation: remove_moving_bg_animation .5s;
+    z-index: -1;
+}
+
+/*  for option below text */
+.movable_background_container .middleText{
+    color: #FFFFFF91;
+    font-size: 1.05rem;
+    font-weight: 300;
+}
+
+.movable_background_container .states{
+    width: 45vw;
+    margin-bottom: 50px;
+}
+

@@ -1,0 +1,30 @@
+.component4Container{
+    overflow-x: hidden;
+
+}
+
+.component4Container p , .component4Container u{
+    font-size: 40px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+}
+
+.component4Container #subtitle{
+    font-size: 30px;    
+    color: #6ec1e4;
+}
+
+.component4Container #subtitle2{
+    color: red;
+}
+
+.Typewriter .Typewriter__wrapper{
+    font-weight: 600;
+    font-size: 22px;
+    color: grey;
+}
+
+.Typewriter .Typewriter__cursor{
+    font-size: 22px;
+    color: grey;
+}
